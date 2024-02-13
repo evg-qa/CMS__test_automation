@@ -1,6 +1,6 @@
 from base.base_test import BaseTest
 
-class TestProfileFeature(BaseTest):
+class TestLoginPage(BaseTest):
 
     def test_authorization(self):
         self.login_page.open()
