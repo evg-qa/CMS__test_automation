@@ -1,7 +1,11 @@
+import allure
 from base.base_test import BaseTest
+
 
 class TestLoginPage(BaseTest):
 
+    @allure.step("Authorization with valid data")
+    @allure.severity("Critical")
     def test_authorization(self):
         self.login_page.open()
         self.login_page.input_login(self.data.LOGIN)

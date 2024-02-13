@@ -10,8 +10,6 @@ class BaseTest:
     dashboard_page: DashboardPage
     my_info_page: MyInfoPage
 
-
-
     @pytest.fixture(autouse=True)
     def setup(self, request, driver):
         request.cls.driver = driver
