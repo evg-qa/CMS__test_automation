@@ -1,7 +1,7 @@
+import time
 import allure
-
 from base.base_page import BasePage
-from config.urls import Urls
+from configuration.urls import Urls
 from locators.my_info_page_locators import MyInfoPageLocators
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import Keys
@@ -11,11 +11,12 @@ class MyInfoPage(BasePage):
     PAGE_URL = Urls.MY_INFO_PAGE
 
     def change_first_name(self, new_first_name):
-        with allure.step(f"Change First Name on {new_first_name}"):
+        with allure.step(f"Change First Name on '{new_first_name}'"):
             self.name = new_first_name
             first_name_field = self.wait.until(EC.element_to_be_clickable(MyInfoPageLocators.FIRST_NAME_FIELD))
-            first_name_field.send_keys(Keys.CONTROL + "А")
+            first_name_field.send_keys(Keys.CONTROL + "a")
             first_name_field.send_keys(Keys.BACKSPACE)
+            time.sleep(2)
             first_name_field.send_keys(new_first_name)
 
     @allure.step("Click 'Save' button")

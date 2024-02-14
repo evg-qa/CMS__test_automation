@@ -1,6 +1,6 @@
 import allure
 from base.base_page import BasePage
-from config.urls import Urls
+from configuration.urls import Urls
 from locators.dashboard_page_locators import DashboardPageLocators
 from selenium.webdriver.support import expected_conditions as EC
 

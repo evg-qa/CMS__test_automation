@@ -9,7 +9,7 @@ class BasePage:
         self.wait = WebDriverWait(driver, timeout=10, poll_frequency=1)
 
     def open(self):
-        with allure.step(f"Open {self.PAGE_URL}"):
+        with allure.step(f"Open {self.PAGE_URL} page"):
             self.driver.get(self.PAGE_URL)
 
     def is_opened(self):

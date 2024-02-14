@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class MyInfoPageLocators:
 
     FIRST_NAME_FIELD = (By.XPATH, "//input[@name='firstName']")

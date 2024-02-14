@@ -1,7 +1,6 @@
 import allure
 from base.base_test import BaseTest
 
-
 class TestLoginPage(BaseTest):
 
     @allure.step("Authorization with valid data")
